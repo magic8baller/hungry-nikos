@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useContext} from 'react';
+import Banner from './components/Banner';
+import RecipeList from './components/RecipeList';
+import './App.css'
+import {RecipeContext} from './context';
+const App = () => {
+	const appContext = useContext(RecipeContext)
+	// const {loading, query} = appContext
+	return (
+		<div style={{paddingTop: '3rem'}}>
+			<Banner />
+			{/* {loading ? <h1>...fetching {query} Recipe</h1> : null
+			} */}
+			<RecipeList />
+		</div>
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	)
 }
 
 export default App;

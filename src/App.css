@@ -1,5 +1,6 @@
-.App {
-  text-align: center;
+body {
+	text-align: center;
+	background: rgba(23, 189, 231, 0.295);
 }
 
 .App-logo {
