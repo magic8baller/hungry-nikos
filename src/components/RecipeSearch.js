@@ -5,12 +5,14 @@ const RecipeSearch = () => {
 	const {handleSubmit, handleSearchChange} = appContext;
 
 	return (
-		<div className='container d-flex justify-content-center my-3'>
+		<div className='container d-flex justify-content-center'>
 
 			<form onSubmit={e => handleSubmit(e)} className="form-inline">
-				<label htmlFor='search'>Search:</label>
+				<label htmlFor='search'></label>
+
 				<input data-age='Love' onChange={e => handleSearchChange(e)} type='text' className="form-control" id='search' placeholder='example: fried eggs' name='search' />
-				<button type='submit' className="btn btn-primary"><i className="fa fa-search"></i></button>
+				<br/>
+				<button type='submit' className="btn btn-primary">GIMME FOOD</button>
 			</form>
 		</div>
 	)
